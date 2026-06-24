@@ -1,0 +1,54 @@
+```php
+
+<?php require_once __DIR__ . '/../layouts/header.php'; ?>
+
+/* Este fragmento de código PHP está creando un formulario para registrar un producto.*/
+<h2>Registrar producto</h2>
+
+<form action="index.php?route=productos/store" method="POST" enctype="multipart/form-data">
+
+    <div class="mb-3">
+        <label class="form-label">SKU</label>
+        <input type="text" name="sku" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text" name="nombre" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Descripción</label>
+        <textarea name="descripcion" class="form-control" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Precio compra</label>
+        <input type="text" name="precio_compra" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Precio venta</label>
+        <input type="text" name="precio_venta" class="form-control" required>
+    </div>
+
+
+    <div class="mb-3">
+        <label class="form-label">Existencia</label>
+        <input type="number" name="existencia" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Imagen del producto</label>
+        <input type="file" name="imagen" class="form-control" accept="image/*">
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+
+    <a href="index.php?route=productos" class="btn btn-secondary">
+        Cancelar
+    </a>
+
+</form>
+
+<?php require_once __DIR__ . '/../layouts/footer.php'; ?>
+```

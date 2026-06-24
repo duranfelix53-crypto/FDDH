@@ -1,5 +1,4 @@
 <?php require_once __DIR__ . '/../layouts/header.php'; ?>
-/* Este fragmento de código PHP forma parte de una página web que muestra un catálogo público de productos. */
 
 <div class="row mb-4">
     <div class="col-md-8">
@@ -26,16 +25,6 @@
         <?php foreach ($productos as $producto): ?>
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
-                 <?php if (!empty($producto['imagen'])): ?>
-                     <img src="IMG/<?= htmlspecialchars($producto['imagen']); ?>" 
-                        class="card-img-top" 
-                       style="height: 200px; object-fit: cover;">
-                 <?php else: ?>
-                      <div style="height: 200px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center;">
-                      <span class="text-muted">Sin imagen</span>
-                     </div>
-                <?php endif; ?>
-    
                     <div class="card-body">
                         <h5 class="card-title"><?= htmlspecialchars($producto['nombre']); ?></h5>
                         <h6 class="card-subtitle mb-2 text-muted">SKU: <?= htmlspecialchars($producto['sku']); ?></h6>
